@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{%block titolo%}
+	{{block.super}} | HOME
+{%endblock titolo%}
+{%block contenuti%}
+{% if menu %}
+<ol>
+{% for comandi in cmd %}
+<li><a href="{{ voce }}">{{ voce}}</a></li>
+{% endfor %}
+</ol>
+{% else %}
+<p>No cmd are available.</p>
+{% endif %}
+{%endblock contenuti%}
